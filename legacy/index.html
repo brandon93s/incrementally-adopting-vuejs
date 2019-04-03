@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Example</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="/loader.js"></script>
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            overflow: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5" style="min-height: 80%">
+
+        <div class="row">
+            <div class="alert alert-info w-100">
+                <h1>
+                    Hello, Meetup!
+                </h1>
+            </div>
+        </div>
+
+       <div class="row">
+            <div class="column col-6 alert alert-success">
+                <h2 class="pb-4" >Legacy Column</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec hendrerit eros, sit amet convallis metus. Pellentesque quis tristique velit. Mauris tempus erat commodo finibus tristique. Suspendisse est erat, auctor id lectus convallis, gravida malesuada sem. Nulla vitae elementum libero. Curabitur velit nisl, interdum id tristique sed, dictum ut mauris. Phasellus consequat non quam tincidunt volutpat. Curabitur iaculis neque sit amet lacus lacinia tincidunt.</p>
+                <p>Etiam pretium lacus bibendum, sagittis risus a, finibus eros. Suspendisse iaculis non mauris sit amet malesuada. Vivamus nunc dolor, vehicula ac finibus sed, imperdiet et nunc. Vivamus id dui nec lorem consectetur dignissim eu vitae dolor. Sed ultricies magna purus, in vestibulum nibh fermentum sit amet. Aenean ut dapibus quam. Fusce nunc urna, vehicula ut dui non, congue pellentesque augue. Aliquam erat volutpat. Suspendisse vehicula commodo est, ut elementum sapien. In hac habitasse platea dictumst. Maecenas vitae dapibus tellus, vitae facilisis elit.</p>
+            </div>
+
+
+            <div class="column col-6">
+                <h2 class="pb-4">Vue.js Column</h2>
+                
+                <div id="mount">Mount Here!</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Specify CDN location for webpack
+        window.microservicesCdnUrl = 'http://localhost:8080/'
+
+        // Load remote component from `CDN`
+        window.microsite.loadRemoteComponent({
+                target: document.querySelector('#mount'), // specify location at run-time
+                appName: 'meetup', // choose application name
+                componentName: 'helloMeetup', // choose component to mount
+                props: { 
+                    msg: 'Vue.js Meetup!!!' // pass props to component
+                }
+        })
+    </script>
+</body>
+</html>

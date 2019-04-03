@@ -1,0 +1,16 @@
+{
+  "name": "meetup-example",
+  "version": "0.1.0",
+  "scripts": {
+    "vue:serve": "serve --port 8080 --cors ./vue/dist",
+    "vue:install": "cd ./vue && npm install",
+    "vue:build": "cd ./vue && npm run build",
+    "legacy:serve": "serve --port 8081 ./legacy",
+  },
+  "keywords": ["Vue.js", "Microsite"],
+  "author": "Brandon Smith",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "6.5.8"
+  }
+}
