@@ -30,7 +30,7 @@ In this demo, the output from the `/vue` application will be rendered inside of 
 
 ## Setup
 
-The following commands should be run in the root of the project to setup, build and serve the demo application components:
+The following commands should be run in the root of the project to setup, build and serve the demo application components. Once complete, the demo app will be running on **`http://localhost:8081`**.
 
 ```sh
 # Install Dev Dependencies
